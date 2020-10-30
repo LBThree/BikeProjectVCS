@@ -1,6 +1,6 @@
 package bikeproject;
 
-public class MountainBike extends Bike{
+public class MountainBike extends Bike implements MountainParts{
 
 	private String suspension, type;
 	private int frameSize;
@@ -24,4 +24,24 @@ public class MountainBike extends Bike{
 		System.out.println("This mountain bike is a " + this.type + " bike and has a " + this.suspension + " suspension and a frame size of " + this.frameSize + "inches.");
 		
 	}//end method printDescription
+
+	@Override
+	public String getSuspension() {
+		return suspension;
+	}
+
+	@Override
+	public void setSuspension(String newValue) {
+
+	}
+
+	@Override
+	public String getType() {
+		return type;
+	}
+
+	@Override
+	public void setType(String newValue) {
+
+	}
 }//end class MountainBike
