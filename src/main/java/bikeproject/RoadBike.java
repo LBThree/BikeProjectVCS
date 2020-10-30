@@ -19,11 +19,13 @@ public class RoadBike extends Bike implements RoadParts {
     this.postHeight = postHeight;
   }//end constructor
 
-  public void printDescription() {
-    super.printDescription();
-    System.out.println("This Roadbike bike has " + this.tyreWidth + "mm tyres and a post height of "
-        + this.postHeight + ".");
-  }//end method printDescription
+  @Override
+  public String toString() {
+    return super.toString() + "This Roadbike has " + this.tyreWidth
+        + " mm tyres and a post height of "
+        + this.postHeight + ".";
+  }//end method toString
+
 
   @Override
   public String getTyreWidth() {
